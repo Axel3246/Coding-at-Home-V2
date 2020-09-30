@@ -1,29 +1,29 @@
 #https://www.youtube.com/watch?v=JlMyYuY1aXU
-#Node Class
+#Node Class, Linked List
 
-class node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
+class node: #Se crea la clase de nodo
+    def __init__(self, data=None): #usando el __init__, se usa el parametro de data
+        self.data = data #Especifica que es variable.data
+        self.next = None #Especifica el siguiente valor, nulo por ahora
 
 #Linked list class
 
-class linked_list:
-    def __init__(self):
-        self.head = node()
+class linked_list: #Se crea la clase de linkes list
+    def __init__(self): #Se define funcion, init siempre inicializa la clase
+        self.head = node() #Se crea una relacion entre .head = class node
     
-    def append(self, data):
-        new_node = node(data)
-        actual = self.head
-        while actual.next != None:
-            actual = actual.next
-        actual.next = new_node
+    def append(self, data): #Funcion para agregar a la linked list
+        new_node = node(data) #Relacion de varaibles con la clase dado el parametro data
+        actual = self.head #Da valor a actual de ser un nodo
+        while actual.next != None: #Iteracion mientras el actual.next no sea nulo
+            actual = actual.next #Da el valor al siguiente nodo, mientras no sea cero
+        actual.next = new_node #Crea el(los) siguiente(s) nodo(s) dando el valor
 
-    def lenght(self):
-        actual = self.head
-        total = 0
-        while actual.next != None:
-            total += 1
+    def lenght(self): #funcion para obtener el largo de la linked list
+        actual = self.head #Valor a actual de nodo
+        total = 0 #Contador
+        while actual.next != None: #Iteracion mientras el actual.next no sea nulo
+            total += 1 
             actual = actual.next
         return total
     
