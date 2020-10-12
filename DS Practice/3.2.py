@@ -30,3 +30,10 @@ print(heros)
 
 heros.sort()
 print(heros)
+
+#In or not in to determine whether a string or int is in a list/attay
+# n = int(input())
+#list[]
+# for i in range n:
+#   list.append(str(input()))
+#print(lista)
